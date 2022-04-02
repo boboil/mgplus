@@ -15,27 +15,30 @@
                 <div class="col-11">
                     <div class="mainheader">
                         <div class="row align-items-center justify-content-between">
-                            <div class="col-2"><a href="{{route('index')}}"><img class="logo" src="{{asset('images/logo.png')}}"/></a></div>
-                            <div class="col-7">
+                            <div class="col-auto"><a href="{{route('index')}}"><img class="logo" src="{{asset('images/logo.png')}}"/></a></div>
+                            <div class="col-auto">
                                 <nav class="navbar navbar-expand-sm justify-content-center">
                                     <ul class="navbar-nav">
                                         <li class="nav-item active"><a href="{{route('index')}}">@lang('header.main')</a></li>
-                                        <li class="nav-item active"><a href="{{route('about')}}">@lang('header.about')</a></li>
                                         <li class="nav-item"><a href="{{route('services')}}">@lang('header.services')</a>
                                             <ul>
                                                 @foreach(\App\Models\Service::all() as $service)
-                                                    <li class="nav-item"><a href="{{route('single-service', $service->slug)}}">{{$service->{'title_'.$lang} }}</a></li>
+                                                    <li class="nav-item"><a href="{{route('single-service', $service->slug)}}">{{$service->title_ru}}</a></li>
                                                 @endforeach
+                                                {{--<li class="nav-item"><a href="#">Изготовление стендов</a></li>--}}
+                                                {{--<li class="nav-item"><a href="#">Разработка концепций акций</a></li>--}}
+                                                {{--<li class="nav-item"><a href="#">Предоставление промоутеров</a></li>--}}
                                             </ul>
                                         </li>
                                         <li class="nav-item"><a href="{{route('portfolio')}}">@lang('header.portfolio')</a></li>
-                                        <li class="nav-item"><a href="{{route('news')}}">@lang('header.news')</a></li>
                                         <li class="nav-item"><a href="{{route('contacts')}}">@lang('header.contacts')</a></li>
                                     </ul>
                                 </nav>
                             </div>
-                            <div class="col-3 right">
-                                <p class="phone"><i class="fas fa-phone-alt"></i>(+99450) 222 34 45</p><a class="callus" data-fancybox="form" data-src="#zvonok" href="tel:+994502223445">@lang('header.tel')</a>
+                            <div class="col-auto right">
+                                <p class="phone"><i class="fas fa-phone-alt"></i>(+99450) 222 34 45</p><a class="callus" data-fancybox="form" data-src="#zvonok" href="javascript:;">@lang('header.tel')</a>
+                            </div>
+                            <div class="col-auto right">
                                 <div id="lang_sel_list">
                                     <div class="wpml-ls-statics-shortcode_actions">
                                         <ul>
@@ -46,16 +49,13 @@
                                     </div>
                                 </div>
                             </div>
-{{--                            <div class="col-auto right">--}}
-{{--                                --}}
-{{--                            </div>--}}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container inmobile">
-            <p class="phone"><i class="fas fa-phone-alt"></i>(+99450) 222 34 45</p><a class="callus" data-fancybox="mobileform" data-src="#zvonok" href="tel:+994502223445">@lang('header.tel')</a>
+            <p class="phone"><i class="fas fa-phone-alt"></i>(+99450) 222 34 45</p><a class="callus" data-fancybox="mobileform" data-src="#zvonok" href="javascript:;">@lang('header.tel')</a>
             <div id="lang_sel_list">
                 <div class="wpml-ls-statics-shortcode_actions">
                     <ul>
