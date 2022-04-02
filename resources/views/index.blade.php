@@ -105,12 +105,12 @@
                                 <div class="row">
                                     <div class="col-md-6 col-sm-12">
                                         <p>
-                                            <input type="text" name="name" placeholder="@lang('index.name')"/>
+                                            <input type="text" name="name" placeholder="@lang('index.name')" required/>
                                         </p>
                                     </div>
                                     <div class="col-md-6 col-sm-12">
                                         <p>
-                                            <input type="text" name="phone" placeholder="@lang('index.tel')"/>
+                                            <input type="text" name="phone" placeholder="@lang('index.tel')" required/>
                                         </p>
                                     </div>
                                     <div class="col-12">
@@ -122,32 +122,6 @@
                             </form>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="container">
-                <h2>@lang('index.comp')</h2>
-                <div class="row">
-                    @include('includes._services')
-                </div>
-            </div>
-        </section>
-        <section class="tabsicon team">
-            <div class="container">
-                <h2>@lang('index.project')</h2>
-                <div class="row">
-                    @foreach(\App\Models\Team::all() as $stuff)
-                        <div class="col-xl-3 col-md-4 col-sm-6 team__item">
-                            <div>
-                                <div class="img"><img src="{{asset($stuff->image)}}"/></div>
-                                <div class="team__item-title">
-                                    <p class="title">{{$stuff->{'name_'.$lang} }}</p>
-                                    <p>{{$stuff->{'position_'.$lang} }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
                 </div>
             </div>
         </section>

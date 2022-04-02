@@ -9,7 +9,7 @@
             </div>
             <div class="mallnav">
                 <div class="container">
-                    <p class="breadcrumbs"><a href="{{route('index')}}">Главная</a><span class="active">Контакты</span></p>
+                    <p class="breadcrumbs"><a href="{{route('index')}}">@lang('header.main')</a><span class="active">@lang('header.contacts')</span></p>
                 </div>
             </div>
             <section>
@@ -26,18 +26,19 @@
                         </div>
                         <div class="col-xl-8 col-md-12">
                             <h3>Форма обратной связи</h3>
-                            <form method="get" action="">
+                            <form action="{{route('contact.form')}}" method="POST">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <p>
-                                    <input placeholder="Ваше имя"/>
+                                    <input name="name" placeholder="@lang('index.name')" required/>
                                 </p>
                                 <p>
-                                    <input placeholder="Номер телефона"/>
+                                    <input name="phone" placeholder="@lang('index.tel')" required/>
                                 </p>
                                 <p>
-                                    <input placeholder="Ваш E-mail"/>
+                                    <input name="email" placeholder="Ваш E-mail" required/>
                                 </p>
                                 <p>
-                                    <textarea placeholder="Ваш вопрос"></textarea>
+                                    <textarea name="question" placeholder="Ваш вопрос"></textarea>
                                 </p>
                                 <p>
                                     <input type="submit" value="Отправить"/>

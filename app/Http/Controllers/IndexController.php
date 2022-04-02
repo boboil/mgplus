@@ -47,12 +47,31 @@ class IndexController extends Controller
         return view('about', compact('about'));
     }
 
+    public function news()
+    {
+        $about = About::find(1);
+        return view('about', compact('about'));
+    }
+
     public function form(Request $request)
     {
         $data = [
             'topic' => 'Консультация Маркетолога',
             'name' => $request->input('name'),
             'phone' => $request->input('phone')
+        ];
+        $this->send($data);
+        return redirect()->back();
+    }
+
+    public function contactForm(Request $request)
+    {
+        $data = [
+            'topic' => 'Заявка со страницы контактов',
+            'name' => $request->input('name'),
+            'phone' => $request->input('phone'),
+            'email' => $request->input('email'),
+            'question' => $request->input('question'),
         ];
         $this->send($data);
         return redirect()->back();
