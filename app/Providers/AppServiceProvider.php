@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Service;
 use Illuminate\Support\ServiceProvider;
 use App\Http\Middleware\LocaleMiddleware;
 
@@ -18,7 +19,9 @@ class AppServiceProvider extends ServiceProvider
         if (!$lang){
             $lang = 'ru';
         }
+        $services = Service::all();
         view()->share('lang',$lang);
+        view()->share('services',$services);
     }
 
     /**

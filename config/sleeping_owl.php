@@ -10,7 +10,7 @@ return [
     |
     */
 
-    'title' => 'Sleeping Owl administrator',
+    'title' => 'Max Group Plus',
 
     /*
     |--------------------------------------------------------------------------
@@ -21,8 +21,8 @@ return [
     |
     */
 
-    'logo'      => '<div><img class="logo" src="http://dev7.bobstudio.info/images/logo.png" style="max-width: 100%"/></div>',
-    'logo_mini' => '<span style="color: #000;">MaxGroupPlus</span>',
+    'logo'      => '<span style="color: #000;">MaxGroupPlus</span>',
+    'logo_mini' => '<span style="color: #000;">MGP</span>',
 
     /*
     |--------------------------------------------------------------------------

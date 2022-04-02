@@ -13,6 +13,7 @@
 Route::group(['prefix' => App\Http\Middleware\LocaleMiddleware::getLocale()], function(){
     Route::get('/', 'IndexController@index')->name('index');
     Route::post('index-form-submit', 'IndexController@form')->name('index.form');
+    Route::post('contact-form-submit', 'IndexController@contactForm')->name('contact.form');
     Route::get('news', 'IndexController@news')->name('news');
     Route::get('about', 'IndexController@about')->name('about');
     Route::get('contacts', 'IndexController@contact')->name('contacts');

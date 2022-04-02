@@ -5863,7 +5863,7 @@ jQuery(document).ready(function ($) {
 
         ],
         "navbars": [{
-            "title": "<span class='toptitlemenu'>Max Group Plus</span>",
+            "title": "<span class='toptitlemenu'>MG Plus</span>",
             "position": "top",
         }],
         "navbar": [{
@@ -5885,7 +5885,7 @@ jQuery(document).ready(function ($) {
 
         ],
         "navbars": [{
-            "title": "<span class='toptitlemenu'>Max Group Plus</span>",
+            "title": "<span class='toptitlemenu'>MG Plus</span>",
             "position": "top"
         }],
         "navbar": [{
@@ -5907,7 +5907,7 @@ jQuery(document).ready(function ($) {
 
         ],
         "navbars": [{
-            "title": "<span class='toptitlemenu'>Max Group Plus</span>",
+            "title": "<span class='toptitlemenu'>MG Plus</span>",
             "position": "top"
         }],
         "navbar": [{
